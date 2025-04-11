@@ -1,0 +1,31 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav_container_mobile,
+.nav_toggle {
+  display: none;
+}
+
+.nav_container_desktop {
+  display: inline-block;
+}
+
+.nav_toggle {
+  display: flex;
+  transform: translateX(100%);
+}
+
+.scrolled .nav_toggle,
+.menu_open .nav_toggle {
+  transform: translateX(0);
+}
+.scrolled .nav_container_mobile,
+.menu_open .nav_container_mobile {
+  display: flex;
+}
+
+.nav li > a {
+  margin: 2px 10px 0;
+  padding: 12px 0 0;
+  font-size: 16px;
+}

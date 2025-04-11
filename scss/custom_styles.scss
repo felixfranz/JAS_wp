@@ -1,0 +1,17 @@
+@import "base";
+
+@media only screen and (min-width: 768px) {
+
+    // styles in 768up.scss
+    @import "768up";
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    // styles in 768up.scss
+    @import "1024up";
+
+}
+
+// end of media query

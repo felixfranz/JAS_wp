@@ -1,0 +1,519 @@
+/*
+Theme Name: JAS WP
+Theme URI: koltrast.de
+Description: JAS Custom Theme
+Version: 1.0
+Author: Koltrast
+Author URI: koltrast.de
+*/
+
+
+@import "css/custom_styles.css";
+
+
+/* Show it is fixed to the top START --- useless?? */
+
+
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+  }
+  
+  /* Show it is fixed to the top END --- useless?? */
+  
+  /* RESET */
+  html, body, div, span, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, code,
+  del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+  }
+  
+  em {
+      font-style: italic;
+  }
+  
+  strong {
+      font-weight: bold;
+  }
+  
+  html,
+  body {
+      margin:0;
+      padding:0;
+      height:100%;
+  }
+  
+  html {font-size: 62.5%;}
+  body {
+    font-size: 14px;font-size: 1.4rem;
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  /* /END RESET */
+  
+  /* X-Small devices (portrait phones, less than 576px) */
+  /* No media query for `xs` since this is the default in Bootstrap */
+
+
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {  }
+  
+  /* X-Large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  }
+  
+  /* XX-Large devices (larger desktops, 1400px and up) */
+  @media (min-width: 1400px) {  }
+
+
+  /** Bootstrap Leftover -- useless??? **/
+ 
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  
+  /** Layout helper **/
+  
+  .blue {background-color: blue;}
+  
+  /** JAS Standards **/
+  
+  :root {
+  --jas_yellow: #ffcc00;
+  --jas_lightyellow: #fffae5;
+  --jas_red: #d40d2f;
+  --jas_lightgray: #f6f6f6;
+  --jas_mediumgray: #BCBCBC;
+  --jas_darkgray: #6a6a6a;
+  --jas_dark: #191919;
+  --jas_blue: #448dba;
+  --jas_lightblue: #eaf3f8;
+  --jas_petrol: #2f7078;
+
+  --ease: cubic-bezier(.12, .845, .305, 1);
+  } 
+  
+  .btn-jas {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    padding: 5px 35px;
+  
+  }
+  
+  /** JAS Typo **/
+  
+  /* gothic-a1-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/gothic-a1-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* gothic-a1-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/gothic-a1-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* gothic-a1-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/gothic-a1-v17-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  /* roboto-slab-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/roboto-slab-v34-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* roboto-slab-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-slab-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* roboto-slab-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-slab-v34-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* roboto-slab-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/roboto-slab-v34-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  h1 {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 300;
+    color: var(--jas_dark);
+    font-size: /*4.4rem*/ 4rem;
+  }
+  
+  h2, h3 {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    color: var(--jas_dark);
+    font-size: 3.4rem;
+    margin-bottom: 30px;
+  }
+  
+  p {padding: 8px 0px;}
+  
+  /** START SEITE **/
+  
+  /** Section header_start **/
+  #header_start {
+    background: linear-gradient(#fff 50%, var(--jas_lightgray) 50%);
+    padding-bottom:50px;
+    }
+  
+  .header_pic {
+    max-height:/*580px*/ 480px;
+    overflow: hidden;
+    padding:0;
+  }
+  .header_pic img {
+    width: 100%;
+  }
+  
+  .header_text {
+    padding: /*75px 100px*/ 50px 50px;
+    background-color: white;
+    border: 1px solid var(--jas_lightgray);
+  }
+  
+  
+  .bottom-rounded {
+    border-radius: 0 0 30px 30px;
+    padding: 20px;
+    height: 90px;
+  }
+
+  .bottom-rounded_empty {
+    border-radius: 0 0 30px 30px;
+    padding: 20px;
+    height: 50px;
+  }
+  
+  .bottom-rounded img {
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  /** Section aktuelles **/
+  
+  #aktuelles {
+    background-color: var(--jas_lightgray);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-size: 1.8rem;
+  }
+  
+  .aktuelles_content {
+    margin: 30px 0px;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .akt_eintrag {
+    /*border-bottom: 1px dotted var(--jas_dark);*/
+    background-color: white;
+  }
+  
+  .akt_eintrag:last-child .cool-dots-box {
+    visibility: hidden;
+  }
+  
+  .cool-dots-box {
+    height: 4px;
+    margin-top: -4px;
+    width: 96%;
+  }
+  
+  .cool-dots {
+    border-style: dotted;
+    border-color: var(--jas_dark);
+    /* border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg"); ORIGIAL-BILD  */
+    border-image-source: url('img/dots.svg');
+    /* border-image-slice: 33% 33%; */
+    border-image-slice: 25% 25%; 
+    border-image-repeat: round;
+    border-width: 0 0 2px 0;
+  }
+  
+  .akt_eintrag_date {
+    background-color: var(--jas_lightblue);
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .akt_eintrag_title {
+    font-weight: 600;
+    padding: 20px;
+    background: url('img/arrow.svg') no-repeat;
+    background-size: 10px;
+    background-position: center right 3%;
+  }
+
+  .akt_eintrag_title p
+  
+  .akt_arrow {
+    float: right;
+    background-color: beige;
+  }
+  
+  .post_header_bar {
+    background-color: var(--jas_yellow);
+  }
+  
+  /** Section termine **/
+  
+  #termine {
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 100px
+  }
+  
+  
+  
+  /** Section schulleben **/
+
+  .section_standards {
+    padding-top: /*100px*/ 75px;
+    padding-bottom: /*100px*/ 75px;
+    font-size: 1.8rem;
+  }
+  
+  #schulleben {
+    background: linear-gradient(var(--jas_lightyellow) 500px, #fff 1px);
+  }
+  
+  /** Section schulsozialarbeit **/
+  
+  #schulsozialarbeit {
+    background-color: white;
+  }
+  
+  /** Section berufsorientierung **/
+  
+  #berufsorientierung {
+    background: linear-gradient(var(--jas_lightblue) 500px, #fff 1px);
+  }
+  /** Footer **/
+  
+  #footer {
+    background-color: var(--jas_lightgray);
+    font-size: 1.8rem;
+  }
+
+  .footer_jas-logo {
+    width: 160px;
+    padding-bottom: 15px;
+  }
+  
+  .footer_3col {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .footer_logos img {
+    padding-bottom: 15px;
+  }
+  
+  .footer_finalrow {
+  background-color: var(--jas_blue);
+  font-size: 1.6rem;
+  }
+  
+  .footer_finalcol { 
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  /*** SINGLE POST ***/
+  
+  #single_post_content {
+    background-color: white;
+    font-size: 1.8rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .single_post_header_text {
+    margin-top: 60px;
+    padding: 50px 75px 20px 75px;
+    background-color: white;
+    border: 1px solid var(--jas_lightgray);
+    border-bottom: 0px;
+  }
+  
+  .single_subhead {
+    font-size: 1.6rem;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 500;
+    color: var(--jas_mediumgray);
+  }
+  
+  .single_post_bottom-rounded {
+    border-radius: 0 0 0px 30px;
+    /*background-color: var(--jas_yellow);*/
+    background: linear-gradient(#fff 48px, var(--jas_yellow) 48px);
+    height: 96px;
+    padding: 0px;
+  }
+  
+  .date_block {
+    float: right;
+    height:96px;
+    min-width: 100px;
+    border: 1px solid var(--jas_darkgray);
+    border-radius: 30px 0 0 0;
+    background: linear-gradient(#fff 50%, var(--jas_darkgray) 50%);
+    font-size:1.8rem;
+    padding: 15px 10px 20px 10px;
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .date_dm {
+    display:block;
+    color: var(--jas_dark);
+  }
+  
+  .date_y {
+    padding-top: 15px;
+    display:block;
+    color: white;
+  }
+  
+  .quote_bar {
+    padding-left: 60px;
+    width: 80%;
+  
+  }
+
+  .quote_typo {
+    font-size: 2.2rem;
+    line-height: 170%;
+  }
+
+  /*** TEAM ***/
+  
+  #schulleitung {
+    background-color: var(--jas_lightgray);
+  }
+  
+  /*#schulleitung, #verwaltung, #kollegium*/ .team-card {
+    color: var(--jas_dark);
+    font-family: 'Gothic A1';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  
+  .bottom-rounded_small {
+    border-radius: 0 0 30px 30px;
+    background-color: var(--jas_yellow);
+    padding: 20px;
+    height: 45px;
+  }
+  
+  .standard_headline {
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border: 1px /*solid var(--jas_mediumgray)*/;
+    border-radius: 0px;
+    margin-bottom: 20px;
+    background-color: white;
+  }
+  
+.shadow { 
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.05);
+}
+  
+  
+  .card-title {
+    display:block;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    border-style: dotted;
+    border-color: var(--jas_mediumgray);
+    border-image-source: url('img/dots.svg');
+    border-image-slice: 25% 25%; 
+    border-image-repeat: round;
+    border-width: 0 0 2px 0;
+  }
+  
+ 
+ .card-text {
+    font-weight: 600;
+  }
+
+  .card-content_team {
+    flex: 1 1 auto;
+    padding: 10px 10px 0px 10px !important;
+  }
+  
+  .team_col {
+    margin-bottom: 20px;
+  }
+
+
+ 

@@ -1,0 +1,169 @@
+/*********************
+HEADER STYLES
+*********************/
+#header {
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 5;
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav_container_mobile {
+  display: inline-block;
+}
+
+.nav_container_desktop {
+  display: none;
+}
+
+.nav-start {
+  display: none;
+}
+
+.nav_container_mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 18;
+  height: 100vh;
+  width: 100%;
+  background: var(--jas_blue);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  transition: all 0.3s var(--ease);
+  transition-delay: 0.3s;
+  transform: translateX(100%);
+}
+.nav_container_mobile .nav-start {
+  display: inline;
+}
+.nav_container_mobile nav ul {
+  display: flex;
+  flex-direction: column;
+}
+.nav_container_mobile nav ul li {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.3s var(--ease);
+  text-align: center;
+}
+.nav_container_mobile nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 10px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+.nav_container_mobile nav ul li a::after {
+  display: none;
+}
+.nav_container_mobile nav ul li.animate_menu {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.nav_toggle {
+  position: fixed;
+  width: 100px;
+  height: 70px;
+  display: flex;
+  z-index: 20;
+  bottom: 0;
+  right: 0;
+  background: var(--jas_blue);
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s var(--ease);
+  --toggle-width: 27px;
+  --toggle-height: 3px;
+  --toggle-main-color: white;
+  --toggle-hover-color: var(--jas_dark);
+  color: var(--toggle-main-color);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+.nav_toggle span.bars {
+  margin-left: 7px;
+  display: block;
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+  top: -2px;
+  background: var(--toggle-main-color);
+  position: relative;
+  transition: all 0.3s var(--ease);
+}
+.nav_toggle span.bars::after, .nav_toggle span.bars::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  height: var(--toggle-height);
+  width: var(--toggle-width);
+  background: var(--toggle-main-color);
+  transition: all 0.3s var(--ease);
+}
+.nav_toggle span.bars::before {
+  top: -10px;
+}
+.nav_toggle span.bars::after {
+  top: 10px;
+}
+.nav_toggle .type {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s var(--ease);
+}
+.nav_toggle:hover span.bars,
+.nav_toggle:hover span.bars::before,
+.nav_toggle:hover span.bars::after {
+  background: var(--jas_blue);
+}
+
+.menu_open {
+  --toggle-color: var(--jas_dark);
+  --toggle-color-hover: white;
+}
+.menu_open .nav_toggle {
+  background: transparent;
+}
+.menu_open .nav_toggle span,
+.menu_open .nav_toggle span::before,
+.menu_open .nav_toggle span::after {
+  background: var(--toggle-color);
+}
+.menu_open .nav_toggle .type {
+  background: transparent;
+  color: var(--toggle-color);
+}
+.menu_open .nav_toggle span.bars {
+  background: transparent;
+}
+.menu_open .nav_toggle span.bars::before {
+  transform: rotate(45deg) translate(0, 0);
+  top: 0px;
+}
+.menu_open .nav_toggle span.bars::after {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+.menu_open .nav_toggle:hover span::before,
+.menu_open .nav_toggle:hover span::after {
+  background: var(--toggle-color-hover);
+}
+.menu_open .nav_toggle:hover .type {
+  color: var(--toggle-color-hover);
+}
+.menu_open .nav_container_mobile {
+  transform: translateX(0);
+}
+.menu_open .nav_container_mobile .nav_content {
+  left: 0;
+}

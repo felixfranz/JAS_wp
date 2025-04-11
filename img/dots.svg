@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" version="1.1" viewBox="0 0 25 25">
+  <!-- Generator: Adobe Illustrator 29.3.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 146)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #191919;
+      }
+    </style>
+  </defs>
+  <g id="Page-1" sketch:type="MSPage">
+    <g id="Artboard-1" sketch:type="MSArtboardGroup">
+      <g id="dots" sketch:type="MSLayerGroup">
+        <g id="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="2.5" cy="2.5" r="2.5"/>
+        </g>
+        <g id="dot1" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="2.5" cy="22.5" r="2.5"/>
+        </g>
+        <g id="dot2" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="2.5" cy="12.5" r="2.5"/>
+        </g>
+        <g id="dot3" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="12.5" cy="2.5" r="2.5"/>
+        </g>
+        <g id="dot4" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="12.5" cy="22.5" r="2.5"/>
+        </g>
+        <g id="dot5" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="22.5" cy="2.5" r="2.5"/>
+        </g>
+        <g id="dot6" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="22.5" cy="22.5" r="2.5"/>
+        </g>
+        <g id="dot7" data-name="dot" sketch:type="MSShapeGroup">
+          <circle class="st0" cx="22.5" cy="12.5" r="2.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,83 @@
+<?php /* Template Name: JAS Start */ ?>
+
+<?php get_header(); ?>
+
+<!-- HEADER start -->
+<section id="header_start">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header_pic">
+          
+        <?php $pic = get_field('intro_pic');
+               if( !empty( $pic ) ): ?>
+               <img src="<?php echo esc_url($pic['url']); ?>" alt="<?php echo esc_attr($pic['alt']); ?>" />
+               <?php endif; ?>
+
+        </div>
+        <div class="col-12 header_text"><h1><?php echo get_field('intro_headline'); ?></h1></div>
+        <div class="col-12 bottom-rounded text-center" style="background-color: <?php echo get_field('bg_rounded_color'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" /><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" /><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" /></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- AKTUELLES start -->
+  <section id="aktuelles">  
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-10">
+          <h2>Aktuelles</h2>
+
+          <div class="container">
+
+            <!-- Einträge abfragen cat=0 sind alle Kategorien, showposts=10 zeigt 10 Artikel an -->
+            <?php query_posts('cat=0&showposts=5');?>
+                <!-- 2. Loop für die Artikel -->
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+              
+<!-- Eintrag START -->
+            <div class="row justify-content-md-center akt_eintrag">
+              <div class="col-lg-2 akt_eintrag_date ">
+              <?php echo get_the_date( 'm.d.Y' ); ?>
+              </div>
+              <div class="col-lg-10 akt_eintrag_title ">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </div>
+              <div class="col-lg-12 cool-dots cool-dots-box"></div>
+            </div>
+<!-- Eintrag END -->
+
+<?php endwhile;?>
+                <?php endif; 
+            wp_reset_query();
+            ?>
+            
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINE start -->
+  <section id="termine">  
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Termine</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMPLATE PARTS start -->
+ 
+<?php include("inc/template_parts.php"); ?>
+
+  <!-- TEMPLATE PARTS end  -->
+
+  
+    
+    <?php get_footer(); ?>
+
