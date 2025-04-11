@@ -79,6 +79,7 @@ NAVIGATION STYLES
 
             display: flex;
             flex-direction: column;
+            list-style: none;
 
             li {
 
@@ -94,7 +95,6 @@ NAVIGATION STYLES
                     font-size: 20px;
                     font-weight: 600;
                     padding: 5px 10px;
-                    color: var(--black);
                     text-transform: uppercase;
 
                     &::after {
@@ -121,6 +121,136 @@ NAVIGATION STYLES
             }
         }
     }
+
+        .mobile-nav {
+            width: 100%;
+            //display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--gray-7);
+            padding-bottom: 10px;
+    
+            &>li {
+                &>a {
+                    font-weight: 700;
+                    text-transform: uppercase;
+    
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+    
+            .sub_menu-toggle {
+                float: right;
+            }
+    
+            li ul.sub-menu {
+                display: block;
+                position: relative;
+                background: none;
+                margin: 0;
+                height: 0;
+                overflow: hidden;
+    
+                li {
+                    opacity: 0;
+                    transition: all 0.3s var(--ease);
+                }
+    
+    
+    
+                &.menu-active {
+    
+                    height: auto;
+    
+                    li {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+    
+                li {
+                    margin: 0;
+    
+                    a {
+                        border: none;
+                        background: transparent;
+    
+                    }
+                }
+    
+            }
+
+                        li ul.sub-menu {
+                            display: block;
+                            position: relative;
+                            background: none;
+                            margin: 0;
+                            height: 0;
+                            overflow: hidden;
+            
+                            li {
+                                opacity: 0;
+                                line-height: 1.5;
+                                transform: translateX(-20px);
+                                transition: all 0.3s var(--ease);
+                            }
+            
+            
+                            &.menu-active {
+            
+                                height: auto;
+            
+                                li {
+                                    opacity: 1;
+                                    transform: translateX(0);
+                                }
+                            }
+            
+                            li {
+                                margin: 0;
+            
+                                a {
+                                    border: none;
+                                    font-size: 16px;
+                                    background: transparent;
+                                    color: white;
+                                    font-weight: 400;
+                                }
+                            }
+            
+                        }
+    
+            .sub_menu-toggle {
+                display: inline-block;
+                position: absolute;
+                right: 10px;
+                top: -5px;
+                width: 20px;
+                height: 20px;
+                background: url(../images/icons/arrow-white@2x.png) center center / contain no-repeat;
+                transition: all 0.3s var(--ease);
+               
+                opacity: 0.6;
+
+                &::before{
+                    content: '+';
+                }
+            
+    
+                &:hover {
+                    opacity: 1;
+                }
+    
+                &.toggle-active {
+                &::before {
+                        content: '–';
+                    }
+                }
+            }
+        }
+    
+        // end main mobile-nav
 
 }
 
@@ -194,7 +324,10 @@ NAVIGATION STYLES
         span.bars,
         span.bars::before,
         span.bars::after {
-            background: var(--jas_blue);
+            background: var(--jas_dark);
+        }
+        .type{
+            color: var(--jas_dark)
         }
     }
 
@@ -206,11 +339,11 @@ NAVIGATION STYLES
 
 // MENU OPEN
 .menu_open {
-    --toggle-color: var(--jas_dark);
-    --toggle-color-hover: white;
+    --toggle-color: white;
+    --toggle-color-hover: var(--jas_dark);
 
     .nav_toggle {
-        background: transparent;
+       // background: transparent;
 
         span,
         span::before,

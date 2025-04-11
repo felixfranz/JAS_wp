@@ -62,4 +62,32 @@ jQuery(document).ready(function ($) {
         }
     });
 
+
+    // add mobile nav list toggles
+    $(".mobile-nav > li").prepend('<a href="#" class="sub_menu-toggle"></a>');
+
+    $(".sub_menu-toggle").on('click', function (event) {
+
+        var target = $(this).closest("li").find("ul");
+
+        if (target.hasClass("menu-active") == true) {
+
+            target.removeClass("menu-active");
+            $(this).removeClass("toggle-active");
+            event.preventDefault();
+        }
+
+        else {
+
+            $(".mobile-nav ul").removeClass("menu-active");
+            $(".mobile-nav .sub_menu-toggle").removeClass("toggle-active");
+
+            target.addClass("menu-active");
+            $(this).addClass("toggle-active");
+            event.preventDefault();
+
+        }
+    });
+
+
 }); /* end of as page load scripts */    

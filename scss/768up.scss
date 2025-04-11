@@ -52,19 +52,14 @@ NAVIGATION STYLES
             color: var(--jas_dark);
             transition: all 0.1s cubic-bezier(.12, .845, .305, 1);
 
-
             &:hover,
             &:focus {
                 color: var(--jas_blue);
                 text-decoration: none;
-
-    
+ 
             }
 
-
         }
-
-
 
         /*
 		plan your menus and drop-downs wisely.
