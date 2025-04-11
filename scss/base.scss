@@ -7,17 +7,30 @@ HEADER STYLES
    // position: absolute;
     left: 0;
     top: 0;
-    width: 100vw;
+    //width: 100vw;
     z-index: 5;
 
     #inner-header {
 
-        #logo {
-
-            a {
-
+        
+            height: 75px;
+            display: flex;
+            
+            justify-content: space-between;
+        
+            #logo {
+                float: left;
+                width: 100px;
+        
+                a {
+                    display: inline-block;
+                    background:  url(../img/logo-jas-no-type.svg) left center / 100px no-repeat;
+                    width: calc(100% - 0px);
+                    height: 75px;
+                    transition: none;
+                    -webkit-transition: none;
+                }
             }
-        }
     }
 }
 
@@ -54,6 +67,7 @@ NAVIGATION STYLES
     transition: all 0.3s var(--ease);
     transition-delay: 0.3s;
     transform: translateX(100%);
+    
 
     .nav-start {
         display: inline;
@@ -74,6 +88,7 @@ NAVIGATION STYLES
                 text-align: center;
 
                 a {
+                    font-family: "Roboto Slab";
                     color: white;
                     text-decoration: none;
                     font-size: 20px;
@@ -185,7 +200,9 @@ NAVIGATION STYLES
 
 }
 
-
+#nav-search{
+    display: none;
+}
 
 // MENU OPEN
 .menu_open {

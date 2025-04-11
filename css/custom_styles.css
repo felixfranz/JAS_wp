@@ -4,9 +4,26 @@ HEADER STYLES
 #header {
   left: 0;
   top: 0;
-  width: 100vw;
   z-index: 5;
 }
+#header #inner-header {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+#header #inner-header #logo {
+  float: left;
+  width: 100px;
+}
+#header #inner-header #logo a {
+  display: inline-block;
+  background: url(../img/logo-jas-no-type.svg) left center/100px no-repeat;
+  width: calc(100% - 0px);
+  height: 75px;
+  transition: none;
+  -webkit-transition: none;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -54,6 +71,7 @@ NAVIGATION STYLES
   text-align: center;
 }
 .nav_container_mobile nav ul li a {
+  font-family: "Roboto Slab";
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -127,6 +145,10 @@ NAVIGATION STYLES
   background: var(--jas_blue);
 }
 
+#nav-search {
+  display: none;
+}
+
 .menu_open {
   --toggle-color: var(--jas_dark);
   --toggle-color-hover: white;
@@ -173,25 +195,10 @@ NAVIGATION STYLES
   HEADER STYLES
   *********************/
   #header #inner-header {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
   #header #inner-header::before, #header #inner-header::after {
     display: none;
-  }
-  #header #inner-header #logo a {
-    width: 100%;
-    min-width: 250px;
-    padding-top: 3px;
-    height: 75px;
-    background: white;
-    transition: all 0.3s var(--ease);
-    box-shadow: none;
-  }
-  #header #inner-header #logo a:hover {
-    background: var(--green);
-    color: white;
   }
   /*********************
   NAVIGATION STYLES
@@ -200,8 +207,6 @@ NAVIGATION STYLES
     border: 0;
     display: flex;
     justify-content: flex-start;
-    margin-right: 40px;
-    margin-top: 20px;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */
@@ -216,38 +221,22 @@ NAVIGATION STYLES
     /* showing sub-menus */
   }
   .nav li > a {
+    font-family: "Roboto Slab";
     display: block;
-    font-weight: 600;
+    font-weight: 400;
     border-bottom: 1px solid transparent;
     margin: 2px 4px 0;
-    padding: 12px 0 0;
+    padding: 10px 0;
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 16px;
     line-height: 1;
     position: relative;
     color: var(--jas_dark);
     transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
   }
-  .nav li > a::after {
-    content: "";
-    display: inline-block;
-    width: 0%;
-    height: 1px;
-    background: white;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: all 0.3s cubic-bezier(0.12, 0.845, 0.305, 1);
-  }
   .nav li > a:hover, .nav li > a:focus {
-    color: white;
+    color: var(--jas_blue);
     text-decoration: none;
-  }
-  .nav li > a:hover::after, .nav li > a:focus::after {
-    width: 100%;
   }
   .nav li ul.sub-menu,
   .nav li ul.children {
@@ -257,6 +246,7 @@ NAVIGATION STYLES
     display: none;
     z-index: 2;
     min-width: 200px;
+    list-style: none;
     background: white;
     /* highlight sub-menu current page */
   }
@@ -266,9 +256,10 @@ NAVIGATION STYLES
   }
   .nav li ul.sub-menu li a,
   .nav li ul.children li a {
-    padding: 12px 10px;
+    padding: 14px 10px;
     border-right: 0;
     display: block;
+    font-size: 18px;
     margin: 0;
     border-bottom: 1px solid #ccc;
   }
@@ -279,7 +270,7 @@ NAVIGATION STYLES
   .nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
   .nav li ul.children li a:hover,
   .nav li ul.children li a:focus {
-    background: var(--main-color);
+    background: var(--jas_blue);
     color: white;
   }
   .nav li ul.sub-menu li:last-child a,
@@ -338,8 +329,7 @@ NAVIGATION STYLES
     display: flex;
   }
   .nav li > a {
-    margin: 2px 10px 0;
-    padding: 12px 0 0;
-    font-size: 16px;
+    margin: 0 10px 0;
+    font-size: 21px;
   }
 }

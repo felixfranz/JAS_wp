@@ -48,12 +48,13 @@
           </nav>
 		</div>
     <!-- OVERLAY NAV end -->  
+
 <!-- HEADER start -->  
 			<header class="header" id="header">
 
-				<div id="inner-header" class="cf">
+				<div id="inner-header" class="container">
 					
-					<div id="logo" ><a href="<?php echo home_url(); ?>">Hier Logo</a></div>
+					<div id="logo" ><a href="<?php echo home_url(); ?>"></a></div>
 					
 					<div class="nav_container_desktop">
 
@@ -72,6 +73,11 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
+      <form id="nav-search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Suchen</button>
+      </form>
+
 						</nav>
 						
 					</div>
@@ -82,10 +88,7 @@
 			</header>
 <!-- HEADER end -->
 
-   <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Suchen</button>
-      </form>
+
 <!-- NAV end -->  
 
 <!-- MAIN CONTENT start -->

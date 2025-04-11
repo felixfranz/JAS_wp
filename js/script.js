@@ -36,8 +36,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
     ///////////////////////
     // switch header style
     ///////////////////////
@@ -55,7 +53,6 @@ jQuery(document).ready(function ($) {
             else {
                 $('body').removeClass(scrolled_class);
             }
-
 
         });
 
