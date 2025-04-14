@@ -2,10 +2,7 @@
 HEADER STYLES
 *********************/
 
-
 #header {
-
-
 
     #inner-header {
         height: 120px;
@@ -20,7 +17,6 @@ HEADER STYLES
         }
     }
 }
-
 
 /*********************
 NAVIGATION STYLES
@@ -48,7 +44,6 @@ NAVIGATION STYLES
             padding:  10px 0;
             text-decoration: none;
             font-size: 16px;
-           
             line-height: 1;
             position: relative;
             color: var(--jas_dark);
@@ -58,9 +53,7 @@ NAVIGATION STYLES
             &:focus {
                 color: var(--jas_blue);
                 text-decoration: none;
- 
             }
-
         }
 
         /*
@@ -73,10 +66,7 @@ NAVIGATION STYLES
             position: absolute;
             display: none;
             z-index: 2;
-            //min-width: 200px;
             list-style: none;
-
-
             background: white;
 
             li {
@@ -86,7 +76,6 @@ NAVIGATION STYLES
                     padding: 14px 10px;
                     border-right: 0;
                     display: block;
-                    //width: 180px;
                     font-size: 18px;
                     font-weight: 300;
                     margin: 0;
@@ -104,7 +93,6 @@ NAVIGATION STYLES
                 }
 
                 &:last-child {
-
                     a {
                         border-bottom: 0;
                     }
@@ -122,11 +110,9 @@ NAVIGATION STYLES
         /* showing sub-menus */
         &:hover>ul {
             display: block;
-            //visibility:visible;
         }
 
     }
-
     /* end .menu ul li */
 
     /* highlight current page */
@@ -142,22 +128,17 @@ NAVIGATION STYLES
 
     /* end current highlighters */
 }
-
 /* end .nav */
-
 
 
 .nav_toggle {
     display: none;
     top: 0;
-
 }
 
 .nav_toggle {
     display: flex;
-    //transform: translateX(100%);
 }
-
 
 
 .scrolled,
@@ -190,64 +171,60 @@ NAVIGATION STYLES
         flex-direction: row;
     }
 
+    .nav_content {
+        display: flex;
+        flex-wrap: wrap;
 
-        .nav_content {
-                display: flex;
-                flex-wrap: wrap;
+        nav {
+            width: 100%;
+        }
+    }
+    // end nav content
 
-                nav {
-                    width: 100%;
-                }
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 40px;
+        .sub_menu-toggle {
+            display: none;
+        }
+
+        &>li {
+            &>a {
+                
+                padding: 0 0 20px;
+
             }
-        
-            // end nav content
+        }
 
-            .mobile-nav {
-                display: flex;
-                justify-content: space-between;
-                padding: 60px 0 40px;
-                .sub_menu-toggle {
-                    display: none;
-                }
+        li ul.sub-menu {
+            display: block;
+            position: relative;
+            height: auto;
 
-                &>li {
-                    &>a {
-                       
-                        padding: 0 0 20px;
-
-                    }
-                }
-
-                li ul.sub-menu {
-                    display: block;
-                    position: relative;
-                    height: auto;
-
-                    li {
-                        margin: 0;
-                        opacity: 1;
-                        transform: none;
-
-                        a {
-                            border: none;
-                            padding: 5px 10px;
-
-                            &:hover {
-                            color: var(--jas_yellow_contrast);
-                            }
-                        }
-                    }
-
-                }
-            }
-            // end main mobile-nav
-
-            .secondary-overlay-nav {
-
+            li {
+                margin: 0;
+                opacity: 1;
+                transform: none;
 
                 a {
-                    font-size: 16px;
-                    font-weight: 300;
+                    border: none;
+                    padding: 5px 10px;
+
+                    &:hover {
+                    color: var(--jas_yellow_contrast);
+                    }
                 }
             }
+
+        }
+    }
+    // end main mobile-nav
+
+    .secondary-overlay-nav {
+        a {
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
 }

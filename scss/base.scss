@@ -4,15 +4,12 @@ HEADER STYLES
 
 
 #header {
-   // position: absolute;
     left: 0;
     top: 0;
-    //width: 100vw;
     z-index: 5;
 
     #inner-header {
-
-        
+    
             height: 70px;
             display: flex;
             
@@ -68,7 +65,6 @@ NAVIGATION STYLES
     transition-delay: 0.3s;
     transform: translateX(100%);
     
-
     .nav-start {
         display: inline;
     }
@@ -78,7 +74,6 @@ NAVIGATION STYLES
         flex-wrap: wrap;
         width: 95%;
      
-
         nav {
             width: 100%;
         }
@@ -98,7 +93,6 @@ NAVIGATION STYLES
                 transform: translateX(100px);
                 opacity: 0;
                 transition: all 0.3s var(--ease);
-               // text-align: center;
 
                 a {
                     font-family: "Roboto Slab";
@@ -129,123 +123,121 @@ NAVIGATION STYLES
         }
     }
 
-        .mobile-nav {
-            width: 100%;
-            //display: flex;
-            justify-content: space-between;
-            border-top: 1px solid var(--jas_border_on_blue);
-            padding: 30px 0 0;
-       
+    .mobile-nav {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid var(--jas_border_on_blue);
+        padding: 30px 0 0;
     
-            &>li {
-                &>a {
-                  //  font-weight: 500;
-                    text-transform: none;
-    
-                    &::after {
-                        display: none;
-                    }
+
+        &>li {
+            &>a {
+                //  font-weight: 500;
+                text-transform: none;
+
+                &::after {
+                    display: none;
                 }
             }
-    
-            .sub_menu-toggle {
-                float: right;
-            }
-    
-            // SUBMENU
-            li ul.sub-menu {
-                display: block;
-                position: relative;
-                background: none;
+        }
+
+        .sub_menu-toggle {
+            float: right;
+        }
+
+        // SUBMENU
+        li ul.sub-menu {
+            display: block;
+            position: relative;
+            background: none;
+            margin: 0;
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 0px;
+
+            li {
+                opacity: 0;
                 margin: 0;
-                height: 0;
-                overflow: hidden;
-                padding-bottom: 0px;
-    
-                li {
-                    opacity: 0;
-                    margin: 0;
-                    transform: translateX(-20px);
-                    transition: all 0.3s var(--ease);
-                    a { 
-                            font-size: 16px;  
-                            color: white;
-                            font-weight: 300;
-                        }
-                }
-    
-                // SUBMENU ACTIVE
-                &.menu-active {
-                    height: auto;
-                    padding-bottom: 10px;
-                    li {
-                        opacity: 1;
-                        transform: translateX(0);
-                    }
-                }
-                // end submenu active
-            }
-
-            // SUBMENU TOGGLE
-            .sub_menu-toggle {
-                display: inline-block;
-                position: absolute;
-                right: 10px;
-                top: -5px;
-                width: 20px;
-                height: 20px;
-                background: url(../images/icons/arrow-white@2x.png) center center / contain no-repeat;
+                transform: translateX(-20px);
                 transition: all 0.3s var(--ease);
-                opacity: 0.6;
-
-                &::before{
-                    content: '+';
-                }
-
-                &:hover {
-                    opacity: 1;
-                }
-    
-                &.toggle-active {
-                &::before {
-                        content: '–';
+                a { 
+                        font-size: 16px;  
+                        color: white;
+                        font-weight: 300;
                     }
+            }
+
+            // SUBMENU ACTIVE
+            &.menu-active {
+                height: auto;
+                padding-bottom: 10px;
+                li {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            // end submenu active
+        }
+
+        // SUBMENU TOGGLE
+        .sub_menu-toggle {
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+            top: -5px;
+            width: 20px;
+            height: 20px;
+            background: url(../images/icons/arrow-white@2x.png) center center / contain no-repeat;
+            transition: all 0.3s var(--ease);
+            opacity: 0.6;
+
+            &::before{
+                content: '+';
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.toggle-active {
+            &::before {
+                    content: '–';
                 }
             }
         }
-    
-        // end main mobile-nav
+    }
 
-        .secondary-overlay-nav{
-            border-top: 1px solid var(--jas_border_on_blue);
-            border-bottom: 1px solid var(--jas_border_on_blue);
-            margin-top: 20px;
-            padding: 20px 0;
-            justify-content: center;
+    // end main mobile-nav
 
-            a{
-                font-size: 12px;
-                font-weight: 300;
+    .secondary-overlay-nav{
+        border-top: 1px solid var(--jas_border_on_blue);
+        border-bottom: 1px solid var(--jas_border_on_blue);
+        margin-top: 20px;
+        padding: 20px 0;
+        justify-content: center;
+
+        a{
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+
+    .image-links{
+        padding: 20px 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+
+        a{
+            overflow:hidden;
+            border-radius: 5px;
+            border: 2px solid transparent;
+            &:hover{
+                border-color: var(--jas_dark);
             }
         }
-
-        .image-links{
-            padding: 20px 0;
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            gap: 20px;
-
-            a{
-                overflow:hidden;
-                border-radius: 5px;
-                border: 2px solid transparent;
-                &:hover{
-                    border-color: var(--jas_dark);
-                }
-            }
-        }
-
+    }
 }
 
 
@@ -311,7 +303,7 @@ NAVIGATION STYLES
         position: relative;
         top: 0px;
         transition: all 0.5s var(--ease);
- }
+    }
 
     &:hover {
 
@@ -324,9 +316,7 @@ NAVIGATION STYLES
             color: var(--toggle-hover-color);
         }
     }
-
 }
-
 
 
 // MENU OPEN
@@ -364,7 +354,6 @@ NAVIGATION STYLES
         }
 
         &:hover {
-
             span::before,
             span::after {
                 background: var(--toggle-color-hover);
