@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
     // NAVI AUF UND ZU
 
     var nav_toggle = $(".nav_toggle");
+    var search_toggle = $(".search_toggle");
 
     function toggle_menu() {
 
@@ -31,6 +32,21 @@ jQuery(document).ready(function ($) {
                 div.toggleClass("animate_menu");
             }, i * 40);
         });
+
+        return false;
+    });
+
+
+    // SEARCH TOGGLE
+    function toggle_search() {
+
+        $("body").toggleClass('search_open');
+
+    }
+
+    search_toggle.click(function () {
+
+        toggle_search();
 
         return false;
     });

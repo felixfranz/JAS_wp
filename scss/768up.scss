@@ -130,7 +130,23 @@ NAVIGATION STYLES
 }
 /* end .nav */
 
+.primary-nav{
+    display: inline-flex;
+}
 
+
+/////// SEARCH FORM 
+#searchform{
+    display: inline-flex;
+}
+
+#searchform_mobile {
+    width: auto;
+    margin-bottom: 10px;
+
+}
+
+// MENU TOGGLE BUTTON
 .nav_toggle {
     display: none;
     top: 0;
@@ -228,3 +244,4 @@ NAVIGATION STYLES
         }
     }
 }
+

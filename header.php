@@ -29,6 +29,7 @@
 <!--OVERLAY NAV start -->    
 		<div class="nav_container_mobile">
 			<div class="nav_content container">
+
 					<nav role="navigation" >
 
 						<?php wp_nav_menu(array(
@@ -63,12 +64,19 @@
 						</nav>
 
             <div class="image-links">
-              
+
               <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" /></a>
               <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" /></a>
               <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" /></a>
 
             </div>
+
+      <form role="search" method="get" id="searchform_mobile" class="searchform" action="<?php echo home_url( '/' ); ?>">
+            
+        <input class="form-control me-2" type="search" placeholder="Suchbegriff" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Suchen</button>
+       
+      </form>
         </div>
 		</div>
     <!-- OVERLAY NAV end -->  
@@ -97,9 +105,12 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
-      <form id="nav-search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Suchen</button>
+      <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
+            
+        <input class="form-control me-2" type="search" placeholder="Suchbegriff" aria-label="Search" value="<?php the_search_query(); ?>">
+        <button class="btn btn-outline-success" type="submit" id="searchsubmit">Suchen</button>
+         <a href="#" class="search_toggle"><span><i class="fa-solid fa-magnifying-glass"></i></span></a>
+       
       </form>
 
 						</nav>
