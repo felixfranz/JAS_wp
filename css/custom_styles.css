@@ -128,6 +128,7 @@ NAVIGATION STYLES
 .nav_container_mobile .mobile-nav li ul.sub-menu li a {
   font-size: 16px;
   color: white;
+  font-weight: 300;
 }
 .nav_container_mobile .mobile-nav li ul.sub-menu.menu-active {
   height: auto;
@@ -166,6 +167,7 @@ NAVIGATION STYLES
 }
 .nav_container_mobile .secondary-overlay-nav a {
   font-size: 12px;
+  font-weight: 300;
 }
 .nav_container_mobile .image-links {
   padding: 20px 0;
@@ -424,6 +426,7 @@ NAVIGATION STYLES
   .nav_container_mobile .mobile-nav {
     display: flex;
     justify-content: space-between;
+    padding: 60px 0 40px;
   }
   .nav_container_mobile .mobile-nav .sub_menu-toggle {
     display: none;
@@ -447,6 +450,10 @@ NAVIGATION STYLES
   }
   .nav_container_mobile .mobile-nav li ul.sub-menu li a:hover {
     color: var(--jas_yellow_contrast);
+  }
+  .nav_container_mobile .secondary-overlay-nav a {
+    font-size: 16px;
+    font-weight: 300;
   }
 }
 @media only screen and (min-width: 1024px) {
