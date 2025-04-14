@@ -106,6 +106,7 @@ body {
   
   :root {
   --jas_yellow: #ffcc00;
+  --jas_yellow_contrast: #fecc40;
   --jas_lightyellow: #fffae5;
   --jas_red: #d40d2f;
   --jas_lightgray: #f6f6f6;
@@ -115,6 +116,7 @@ body {
   --jas_blue: #448dba;
   --jas_lightblue: #eaf3f8;
   --jas_petrol: #2f7078;
+  --jas_border_on_blue: RGBA(255, 255, 255, 0.3);
 
   --ease: cubic-bezier(.12, .845, .305, 1);
   } 

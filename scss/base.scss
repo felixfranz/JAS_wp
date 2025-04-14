@@ -13,7 +13,7 @@ HEADER STYLES
     #inner-header {
 
         
-            height: 75px;
+            height: 70px;
             display: flex;
             
             justify-content: space-between;
@@ -24,7 +24,7 @@ HEADER STYLES
         
                 a {
                     display: inline-block;
-                    background:  url(../img/logo-jas-no-type.svg) left center / 100px no-repeat;
+                    background:  url(../img/logo-jas-no-type.svg) left center / 80px no-repeat;
                     width: calc(100% - 0px);
                     height: 75px;
                     transition: none;
@@ -73,6 +73,18 @@ NAVIGATION STYLES
         display: inline;
     }
 
+    .nav_content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 95%;
+     
+
+        nav {
+            width: 100%;
+        }
+    }
+    // end nav content
+
     nav {
 
         ul {
@@ -86,25 +98,20 @@ NAVIGATION STYLES
                 transform: translateX(100px);
                 opacity: 0;
                 transition: all 0.3s var(--ease);
-                text-align: center;
+               // text-align: center;
 
                 a {
                     font-family: "Roboto Slab";
                     color: white;
                     text-decoration: none;
                     font-size: 20px;
-                    font-weight: 600;
                     padding: 5px 10px;
-                    text-transform: uppercase;
+                    text-transform: none;
 
                     &::after {
                         display: none;
                     }
 
-                    &:hover {
-              
-
-                    }
                 }
 
                 &.animate_menu {
@@ -126,13 +133,14 @@ NAVIGATION STYLES
             width: 100%;
             //display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid var(--gray-7);
-            padding-bottom: 10px;
+            border-top: 1px solid var(--jas_border_on_blue);
+            padding: 30px 0 0;
+       
     
             &>li {
                 &>a {
-                    font-weight: 700;
-                    text-transform: uppercase;
+                  //  font-weight: 500;
+                    text-transform: none;
     
                     &::after {
                         display: none;
@@ -144,6 +152,7 @@ NAVIGATION STYLES
                 float: right;
             }
     
+            // SUBMENU
             li ul.sub-menu {
                 display: block;
                 position: relative;
@@ -151,76 +160,33 @@ NAVIGATION STYLES
                 margin: 0;
                 height: 0;
                 overflow: hidden;
+                padding-bottom: 0px;
     
                 li {
                     opacity: 0;
+                    margin: 0;
+                    transform: translateX(-20px);
                     transition: all 0.3s var(--ease);
+                    a { 
+                            font-size: 16px;  
+                            color: white;
+                            //font-weight: 400;
+                        }
                 }
     
-    
-    
+                // SUBMENU ACTIVE
                 &.menu-active {
-    
                     height: auto;
-    
+                    padding-bottom: 10px;
                     li {
                         opacity: 1;
                         transform: translateX(0);
                     }
                 }
-    
-                li {
-                    margin: 0;
-    
-                    a {
-                        border: none;
-                        background: transparent;
-    
-                    }
-                }
-    
+                // end submenu active
             }
 
-                        li ul.sub-menu {
-                            display: block;
-                            position: relative;
-                            background: none;
-                            margin: 0;
-                            height: 0;
-                            overflow: hidden;
-            
-                            li {
-                                opacity: 0;
-                                line-height: 1.5;
-                                transform: translateX(-20px);
-                                transition: all 0.3s var(--ease);
-                            }
-            
-            
-                            &.menu-active {
-            
-                                height: auto;
-            
-                                li {
-                                    opacity: 1;
-                                    transform: translateX(0);
-                                }
-                            }
-            
-                            li {
-                                margin: 0;
-            
-                                a {
-                                    border: none;
-                                    font-size: 16px;
-                                    background: transparent;
-                                    color: white;
-                                    font-weight: 400;
-                                }
-                            }
-            
-                        }
-    
+            // SUBMENU TOGGLE
             .sub_menu-toggle {
                 display: inline-block;
                 position: absolute;
@@ -230,14 +196,12 @@ NAVIGATION STYLES
                 height: 20px;
                 background: url(../images/icons/arrow-white@2x.png) center center / contain no-repeat;
                 transition: all 0.3s var(--ease);
-               
                 opacity: 0.6;
 
                 &::before{
                     content: '+';
                 }
-            
-    
+
                 &:hover {
                     opacity: 1;
                 }
@@ -252,18 +216,47 @@ NAVIGATION STYLES
     
         // end main mobile-nav
 
+        .secondary-overlay-nav{
+            border-top: 1px solid var(--jas_border_on_blue);
+            border-bottom: 1px solid var(--jas_border_on_blue);
+            margin-top: 20px;
+            padding: 20px 0;
+            justify-content: center;
+
+            a{
+                font-size: 12px;
+            }
+        }
+
+        .image-links{
+            padding: 20px 0;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+
+            a{
+                overflow:hidden;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                &:hover{
+                    border-color: var(--jas_dark);
+                }
+            }
+        }
+
 }
 
 
 
-
+// MENU TOGGLE BUTTON 
 .nav_toggle {
     position: fixed;
     width: 100px;
     height: 70px;
     display: flex;
     z-index: 20;
-    bottom: 0;
+    top: 0;
     right: 0;
     background: var(--jas_blue);
     justify-content: center;
@@ -274,7 +267,7 @@ NAVIGATION STYLES
     --toggle-width: 27px;
     --toggle-height: 3px;
     --toggle-main-color: white;
-    --toggle-hover-color: var(--jas_dark);
+    --toggle-hover-color: var(--jas_yellow_contrast);
 
     color: var(--toggle-main-color);
     text-decoration: none;
@@ -324,23 +317,21 @@ NAVIGATION STYLES
         span.bars,
         span.bars::before,
         span.bars::after {
-            background: var(--jas_dark);
+            background: var(--toggle-hover-color);
         }
         .type{
-            color: var(--jas_dark)
+            color: var(--toggle-hover-color);
         }
     }
 
 }
 
-#nav-search{
-    display: none;
-}
+
 
 // MENU OPEN
 .menu_open {
     --toggle-color: white;
-    --toggle-color-hover: var(--jas_dark);
+    --toggle-color-hover: var(--jas_yellow_contrast);
 
     .nav_toggle {
        // background: transparent;
@@ -395,7 +386,9 @@ NAVIGATION STYLES
 }
 
 
-
+#nav-search {
+    display: none;
+}
 
 
 

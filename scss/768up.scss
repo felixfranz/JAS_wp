@@ -8,14 +8,16 @@ HEADER STYLES
 
 
     #inner-header {
-
+        height: 120px;
         align-items: center;
         &::before,
         &::after {
             display: none;
         }
 
-
+        #logo a{
+            background: url(../img/logo-jas-no-type.svg) left center / 100px no-repeat;
+        }
     }
 }
 
@@ -71,7 +73,7 @@ NAVIGATION STYLES
             position: absolute;
             display: none;
             z-index: 2;
-            min-width: 200px;
+            //min-width: 200px;
             list-style: none;
 
 
@@ -86,6 +88,7 @@ NAVIGATION STYLES
                     display: block;
                     //width: 180px;
                     font-size: 18px;
+                    font-weight: 300;
                     margin: 0;
                     border-bottom: 1px solid #ccc;
 
@@ -142,9 +145,7 @@ NAVIGATION STYLES
 
 /* end .nav */
 
-.nav_container_mobile .nav {
-    margin-right: 0;
-}
+
 
 .nav_toggle {
     display: none;
@@ -170,4 +171,75 @@ NAVIGATION STYLES
         display: flex;
     }
 
+}
+
+.nav_container_mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul li a:hover{
+        color: var(--jas_yellow_contrast);
+    }
+
+    .nav {
+            margin-right: 0;
+        }
+
+    nav ul{
+        flex-direction: row;
+    }
+
+
+        .nav_content {
+                display: flex;
+                flex-wrap: wrap;
+
+                nav {
+                    width: 100%;
+                }
+            }
+        
+            // end nav content
+
+            .mobile-nav {
+                display: flex;
+                justify-content: space-between;
+
+                .sub_menu-toggle {
+                    display: none;
+                }
+
+                &>li {
+                    &>a {
+                       
+                        padding: 0 0 20px;
+
+                    }
+                }
+
+                li ul.sub-menu {
+                    display: block;
+                    position: relative;
+                    height: auto;
+
+                    li {
+                        margin: 0;
+                        opacity: 1;
+                        transform: none;
+
+                        a {
+                            border: none;
+                            padding: 5px 10px;
+
+                            &:hover {
+                            color: var(--jas_yellow_contrast);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            // end main mobile-nav
 }
