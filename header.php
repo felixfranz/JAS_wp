@@ -73,7 +73,7 @@
 
       <form role="search" method="get" id="searchform_mobile" class="searchform" action="<?php echo home_url( '/' ); ?>">
             
-        <input class="form-control me-2" type="search" placeholder="Suchbegriff" aria-label="Search">
+        <input class="form-control me-2" type="search" name="s" placeholder="Suchbegriff" aria-label="Search" value="">
         <button class="btn btn-outline-success" type="submit">Suchen</button>
        
       </form>
@@ -107,7 +107,7 @@
 
       <form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
             
-        <input class="form-control me-2" type="search" placeholder="Suchbegriff" aria-label="Search" value="<?php the_search_query(); ?>">
+        <input class="" type="search" name="s" placeholder="Suchbegriff" aria-label="Search" value="">
         <button class="btn btn-outline-success" type="submit" id="searchsubmit">Suchen</button>
          <a href="#" class="search_toggle"><span><i class="fa-solid fa-magnifying-glass"></i></span></a>
        
