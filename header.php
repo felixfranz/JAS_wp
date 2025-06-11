@@ -65,9 +65,9 @@
 
             <div class="image-links">
 
-              <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" /></a>
-              <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" /></a>
-              <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" /></a>
+              <a href="https://samos.webuntis.com/WebUntis/?school=jas-ostbevern#/basic/login" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" alt="Link zu WebUntis" /></a>
+              <a href="#" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" alt="Link zum Mensaplan" /></a>
+              <a href="https://jas-edu.de/iserv" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" alt="Link zu iServ" /></a>
 
             </div>
 

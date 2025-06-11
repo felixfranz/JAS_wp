@@ -15,7 +15,7 @@
 
         </div>
         <div class="col-12 header_text"><h1><?php echo get_field('intro_headline'); ?></h1></div>
-        <div class="col-12 bottom-rounded text-center" style="background-color: <?php echo get_field('bg_rounded_color'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" /><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" /><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" /></div>
+        <div class="col-12 bottom-rounded text-center img_links" style="background-color: <?php echo get_field('bg_rounded_color'); ?>"><a href="https://samos.webuntis.com/WebUntis/?school=jas-ostbevern#/basic/login" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" alt="Link zu WebUntis" /></a><a href="#" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" alt="Link zum Mensaplan" /></a><a href="https://jas-edu.de/iserv" taget="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" alt="Link zu iServ" /></a></div>
       </div>
     </div>
   </section>

@@ -56,7 +56,7 @@
 <!-- 2col_bild_text START -->
 <?php if(get_row_layout() == "2col_bild_text"): ?>
 
-<section class="section_standards" style="background: <?php echo get_sub_field('bg_color'); ?>">  
+<section class="section_standards" style="background: linear-gradient(<?php echo get_sub_field('bg_color'); ?> 450px, #fff 1px);">  
    <div class="container">
 
       <?php if( get_sub_field('headline_top') ): ?>
@@ -100,7 +100,7 @@
 <!-- 2col_text_bild START -->
 <?php if(get_row_layout() == "2col_text_bild"): ?>
 
-<section class="section_standards" style="background: <?php echo get_sub_field('bg_color'); ?>">  
+<section class="section_standards" style="background: linear-gradient(<?php echo get_sub_field('bg_color'); ?> 450px, #fff 1px);">  
    <div class="container">
      <div class="row gx-5 d-flex justify-content-center ">
 

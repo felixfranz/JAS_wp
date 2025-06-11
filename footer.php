@@ -8,29 +8,19 @@
     <div class="row gx-5 d-flex justify-content-center footer_3col">
       <div class="col-lg-4">
         <img class="footer_jas-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-jas.svg"/>
-        <p>
-        <b>Josef-Annegarn-Schule</b><br>
-        Sekundarschule und Verbundschule<br>
-        Hanfgarten 18<br>
-        48346 Ostbevern
-        </p>
+
+        <?php echo get_field('footer_links', 'option'); ?>
+
       </div>
       <div class="col-lg-4">
-        <p>
-        <b>Schulsozialarbeit</b><br>
-        0 25 32 - 95 65 1-17<br>
-        <a href="mailto:schulsozialarbeit@jas-ostbevern.de">schulsozialarbeit@jas-ostbevern.de</a>
-        </p>
-        <p>
-        <b>Sekretariat und Schulleitung</b><br>
-        0 25 32 - 95 65 1-0<br>
-        schulverwaltung@jas-ostbevern.de
-        </p>
+       
+        <?php echo get_field('footer_rechts', 'option'); ?>
+
       </div>
-      <div class="col-lg-2 text-center footer_logos">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" />
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" />
-        <img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" />
+      <div class="col-lg-2 text-center footer_logos img_links">
+        <a href="https://samos.webuntis.com/WebUntis/?school=jas-ostbevern#/basic/login" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" alt="Link zu WebUntis" /></a>
+        <a href="#" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" alt="Link zum Mensaplan" /></a>
+        <a href="https://jas-edu.de/iserv" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" alt="Link zu iServ" /></a>
 
       </div>
     </div>

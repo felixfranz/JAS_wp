@@ -2,146 +2,79 @@
  
  
  
-<?php while(the_flexible_field("team_parts")): ?>
+<?php while(the_flexible_field("post_parts")): ?>
 
-  
-<!-- Team Cards START -->
-<?php if(get_row_layout() == "team_cards"): ?>
+<!-- 2pic START -->
+<?php if(get_row_layout() == "2pic"): ?>
 
-<section class="section_standards" style="background-color:<?php echo get_sub_field('bg_color'); ?>;">  
+<section class="section_standards">  
    <div class="container">
-
-      <?php if( get_sub_field('headline') ): ?>
-         <div class="row gx-5 d-flex justify-content-center">
-            <div class="col-lg-10">
-                <h2><?php echo get_sub_field('headline'); ?></h2>
-                <?php $pic = get_sub_field('team_pic');
-               if( !empty( $pic ) ): ?>
-               <img class="img-fluid" src="<?php echo esc_url($pic['url']); ?>" alt="<?php echo esc_attr($pic['alt']); ?>" />
+     
+     <div class="row gx-5 d-flex justify-content-center">
+         <!-- pic links -->
+         <div class="col-lg-5">
+         <?php $picli = get_sub_field('pic_links');
+               if( !empty( $picli ) ): ?>
+               <img class="img-fluid" src="<?php echo esc_url($picli['url']); ?>" alt="<?php echo esc_attr($picli['alt']); ?>" />
                <?php endif; ?>
-            </div>
-         </div>       
-      <?php endif; ?>
-
-      <?php if( have_rows('team_entry') ): ?>
-
-         <div class="row gx-5 d-flex justify-content-center">
-         <div class="col-lg-10">
-
-
-         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 team_card">
-
-         <?php while( have_rows('team_entry') ): the_row(); 
-         
-         // vars                       
-                                
-         $imageArray = get_sub_field('foto'); // Array returned by Advanced Custom Fields
-         $imageURL = $imageArray['url']; // Grab the full size version 
-         
-         $name = get_sub_field('name');
-         $descr= get_sub_field('description');
-         $email = get_sub_field('email');
-         ?>
-
-         <!-- Repeater Part Start -->
-         <div class="col team_col">
-               <div class="card h-100 shadow">
-                  <img src="<?php echo $imageURL; ?>" class="card-img-top">
-                     <div class="card-content_team">
-                     <span class="card-title"><?php echo $descr; ?></span>
-                     <p class="card-text"><?php echo $name; ?></p>
-                     <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-                     </div>
-               </div>
          </div>
-         <!-- Repeater Part End -->
-
-         <?php endwhile; ?>
-
-         </div>
-
-         </div></div>
-         <?php endif; ?>
-
-</section>
-      <?php endif; ?>
-
-
-
-   <!-- Team List START -->
-
-   <?php if(get_row_layout() == "team_list"): ?>
-
-   <section class="section_standards" style="background-color:<?php echo get_sub_field('bg_color'); ?>;">  
-      <div class="container">
-
-      <?php if( get_sub_field('headline') ): ?>
-         <div class="row gx-5 d-flex justify-content-center">
-            <div class="col-lg-10">
-                <h2><?php echo get_sub_field('headline'); ?></h2>
-
-                <?php $pic = get_sub_field('team_pic');
-               if( !empty( $pic ) ): ?>
-               <img class="img-fluid" src="<?php echo esc_url($pic['url']); ?>" alt="<?php echo esc_attr($pic['alt']); ?>" />
-               <?php endif; ?> 
-               
-
-            </div>
-         </div>       
-      <?php endif; ?>
-
-      <?php if( have_rows('team_entry') ): ?>
-
-         <div class="row gx-5 d-flex justify-content-center">
-         <div class="col-lg-10">
-
-
-         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 team_card">
-
-         <?php while( have_rows('team_entry') ): the_row(); 
          
-         // vars                       
-                                
-         $imageArray = get_sub_field('foto'); // Array returned by Advanced Custom Fields
-         $imageURL = $imageArray['url']; // Grab the full size version 
-         
-         $name = get_sub_field('name');
-         $email = get_sub_field('email');
-         ?>
-
-         <!-- Repeater Part Start -->
-         <div class="col team_col">
-               <div class="card h-100 shadow">
-                  <img src="<?php echo $imageURL; ?>" class="card-img-top">
-                     <div class="card-body">
-                     <p><?php echo $name; ?></p>
-                     <p class="card-title"><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
-                     </div>
-               </div>
-         </div>
-         <!-- Repeater Part End -->
-
-         <?php endwhile; ?>
-
-         </div>
-
-         </div></div>
-
-
-
-    </section>
-   <?php endif; ?>  
-
-  <!-- Team List END -->
-
-
-
-
+         <!-- pic rechts -->
+         <div class="col-lg-5">
+         <?php $picre = get_sub_field('pic_rechts');
+               if( !empty( $picre ) ): ?>
+               <img class="img-fluid" src="<?php echo esc_url($picre['url']); ?>" alt="<?php echo esc_attr($picre['alt']); ?>" />
+               <?php endif; ?>
+         </div>  
+           
+       </div>
+     </div>
    </div>
  </section>
 
  <?php endif; ?>
-<!-- 2col END -->   
+<!-- 2pic END -->   
+ 
+<!-- galerie START -->
+<?php if(get_row_layout() == "galerie"): ?>
+
+<section class="section_standards">  
+  <div class="container">
+    <div class="row gx-5 d-flex justify-content-center">
+
+    <div class="col-lg-10">
+    
+          <?php $images = get_sub_field('galerie');
+if( $images ): ?>
+<div class="gallery">
+    <ul>
+        <?php foreach( $images as $image ): 
+            $content = '<li>';
+                $content .= '<a class="gallery_image" href="'. $image['url'] .'">';
+                     $content .= '<img src="'. $image['sizes']['thumbnail'] .'" alt="'. $image['alt'] .'" />';
+                $content .= '</a>';
+            $content .= '</li>';
+            if ( function_exists('slb_activate') ){
+    $content = slb_activate($content);
+    }
+    
+echo $content;?>
+        <?php endforeach; ?>
+    </ul>
+</div>
+<?php endif; ?>
+
+    </div>
+
+  </div>
+  </div>
+</section>
+
+ <?php endif; ?>
+<!-- galerie END -->    
+
+
+
 
 
 

@@ -1,67 +1,42 @@
+
+
 <?php get_header(); ?>
 
-			<div id="content">
+<!-- HEADER start -->
+<section id="header_start">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 header_text"><h1>Suchergebnis</h1></div>
+        <div class="col-12 bottom-rounded_empty text-center bottom-rounded-blue"></div>
+      </div>
+    </div>
+  </section>
+<!-- HEADER ende -->
 
-				<div id="inner-content" class="wrap cf">
+  <!-- SEARCH RESULTS start -->
+ 
+  <section class="section_standards">  
+   <div class="container">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span>Suchergebnis</span> <?php echo esc_attr(get_search_query()); ?></h1>
+		<div class="row gx-5 d-flex justify-content-center">
+		<div class="col-lg-10">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+					<?php the_excerpt( '<span class="read-more">Mehr lesen</span>' ); ?>
+				
+				<?php endwhile; ?>
 
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php else : ?>
+					<h2>Die Suche ergab leider keinen Treffer.</h2>
+				<?php endif; ?>
+			</div> 
+		</div>
+   </div>
+ </section>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+  <!-- SEARCH RESULTS end  -->
 
-								<header class="entry-header article-header">
+  
+    
+    <?php get_footer(); ?>
 
-									<h3 class="search-title entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-
-
-								</header>
-
-								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">Mehr lesen</span>' ); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( "Kategorie", get_the_category_list(', ') ); ?>
-                  					<?php endif; ?>
-
-                 				
-
-								</footer> <!-- end article footer -->
-
-							</article>
-
-						<?php endwhile; ?>
-
-								
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</main>
-
-						
-
-					</div>
-
-			</div>
-
-<?php get_footer(); ?>

@@ -32,12 +32,16 @@
             <!-- Bild VOR content start -->
             <?php $pic1 = get_field('pic1');
                if( !empty( $pic1 ) ): ?>
-               <img class="img-fluid" src="<?php echo esc_url($pic1['url']); ?>" alt="<?php echo esc_attr($pic1['alt']); ?>" />
+               <img class="img-fluid single_post_pic_margin_bot" src="<?php echo esc_url($pic1['url']); ?>" alt="<?php echo esc_attr($pic1['alt']); ?>" />
                <?php endif; ?> 
-            <!-- Bild VOR content end -->    
-
+            <!-- Bild VOR content end -->   
+             
+            <!-- content start -->
+            <div class="single_post_content">
                 <?php the_content(); ?>
-
+            </div>    
+            <!-- content end -->  
+            
             <!-- Bild NACH content start -->
             <?php $pic2 = get_field('pic2');
                if( !empty( $pic2 ) ): ?>
