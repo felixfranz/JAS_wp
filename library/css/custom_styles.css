@@ -339,6 +339,42 @@ NAVIGATION STYLES
   display: inline;
 }
 
+.gallery ul {
+  --numcolumns: 2;
+  --gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(var(--numcolumns), 1fr);
+  grid-template-rows: auto;
+  gap: var(--gap);
+  align-items: stretch;
+  padding-bottom: 40px;
+}
+
+.gallery ul li {
+  aspect-ratio: var(--ratio-golden);
+  overflow: hidden;
+  background: black;
+}
+
+.gallery ul li a {
+  transition: 0.2s all ease;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  aspect-ratio: var(--ratio-golden);
+  overflow: hidden;
+}
+.gallery ul li a:hover {
+  opacity: 0.5;
+}
+
+.gallery ul > li a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media only screen and (min-width: 768px) {
   /*********************
   HEADER STYLES
@@ -517,6 +553,10 @@ NAVIGATION STYLES
     font-size: 16px;
     font-weight: 300;
   }
+  .gallery ul {
+    --numcolumns: 3;
+    --gap: 10px;
+  }
 }
 @media only screen and (min-width: 1024px) {
   /*********************
@@ -545,4 +585,8 @@ NAVIGATION STYLES
     margin: 0 10px 0;
     font-size: 21px;
   }
-}
+  .gallery ul {
+    --numcolumns: 3;
+    --gap: 10px;
+  }
+}/*# sourceMappingURL=custom_styles.css.map */

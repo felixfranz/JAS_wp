@@ -1,0 +1,190 @@
+/*********************
+HEADER STYLES
+*********************/
+#header #inner-header {
+  height: 120px;
+  align-items: center;
+}
+#header #inner-header::before, #header #inner-header::after {
+  display: none;
+}
+#header #inner-header #logo a {
+  background: url(../img/logo-jas-no-type.svg) left center/100px no-repeat;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  border: 0;
+  display: flex;
+  justify-content: flex-start;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav:after, .nav:before {
+  display: none;
+}
+.nav li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+.nav li > a {
+  font-family: "Roboto Slab";
+  display: block;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  margin: 2px 4px 0;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  position: relative;
+  color: var(--jas_dark);
+  transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
+}
+.nav li > a:hover, .nav li > a:focus {
+  color: var(--jas_blue);
+  text-decoration: none;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  margin-top: -1px;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 2;
+  list-style: none;
+  background: white;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  text-align: left;
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding: 14px 10px;
+  border-right: 0;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li a::after,
+.nav li ul.children li a::after {
+  display: none;
+}
+.nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
+.nav li ul.children li a:hover,
+.nav li ul.children li a:focus {
+  background: var(--jas_blue);
+  color: white;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li:hover > ul {
+  display: block;
+}
+.nav li.current-menu-item a::after,
+.nav li.current_page_item a::after,
+.nav li.current_page_ancestor a::after {
+  width: 100%;
+}
+
+/* end .nav */
+.primary-nav {
+  display: inline-flex;
+}
+
+#searchform {
+  display: inline-flex;
+}
+
+#searchform_mobile {
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.nav_toggle {
+  display: none;
+  top: 0;
+}
+
+.nav_toggle {
+  display: flex;
+}
+
+.scrolled .nav_toggle,
+.menu_open .nav_toggle {
+  transform: translateX(0);
+}
+.scrolled .nav_container_mobile,
+.menu_open .nav_container_mobile {
+  display: flex;
+}
+
+.nav_container_mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_container_mobile ul li a:hover {
+  color: var(--jas_yellow_contrast);
+}
+.nav_container_mobile .nav {
+  margin-right: 0;
+}
+.nav_container_mobile nav ul {
+  flex-direction: row;
+}
+.nav_container_mobile .nav_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nav_container_mobile .nav_content nav {
+  width: 100%;
+}
+.nav_container_mobile .mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 40px;
+}
+.nav_container_mobile .mobile-nav .sub_menu-toggle {
+  display: none;
+}
+.nav_container_mobile .mobile-nav > li > a {
+  padding: 0 0 20px;
+}
+.nav_container_mobile .mobile-nav li ul.sub-menu {
+  display: block;
+  position: relative;
+  height: auto;
+}
+.nav_container_mobile .mobile-nav li ul.sub-menu li {
+  margin: 0;
+  opacity: 1;
+  transform: none;
+}
+.nav_container_mobile .mobile-nav li ul.sub-menu li a {
+  border: none;
+  padding: 5px 10px;
+}
+.nav_container_mobile .mobile-nav li ul.sub-menu li a:hover {
+  color: var(--jas_yellow_contrast);
+}
+.nav_container_mobile .secondary-overlay-nav a {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.gallery ul {
+  --numcolumns: 3;
+  --gap: 10px;
+}/*# sourceMappingURL=768up.css.map */

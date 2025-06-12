@@ -122,7 +122,6 @@ NAVIGATION STYLES
             }
         }
     }
-
     .mobile-nav {
         width: 100%;
         justify-content: space-between;
@@ -451,6 +450,43 @@ NAVIGATION STYLES
     }
 }
 
+// GALLERIES
 
+.gallery ul {
+    --numcolumns: 2;
+    --gap: 10px;
+    display: grid;
 
+    grid-template-columns: repeat(var(--numcolumns), 1fr);
 
+    grid-template-rows: auto;
+    gap: var(--gap);
+    align-items: stretch;
+    padding-bottom: 40px;
+}
+
+.gallery ul li {
+    aspect-ratio: var(--ratio-golden);
+    overflow: hidden;
+    background: black;
+}
+
+.gallery ul li a {
+    transition: 0.2s all ease;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    aspect-ratio: var(--ratio-golden);
+    overflow: hidden;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.gallery ul>li a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
