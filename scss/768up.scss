@@ -49,10 +49,14 @@ NAVIGATION STYLES
             color: var(--jas_dark);
             transition: all 0.1s cubic-bezier(.12, .845, .305, 1);
 
-            &:hover,
-            &:focus {
+            &:hover{
                 color: var(--jas_blue);
                 text-decoration: none;
+            }
+            &:focus {
+                background-color: teal;
+                color: white;
+                text-decoration: underline;
             }
         }
 
@@ -85,10 +89,15 @@ NAVIGATION STYLES
                         display: none;
                     }
 
-                    &:hover,
-                    &:focus {
+                    &:hover{
                         background: var(--jas_blue);
                         color: white;
+                    }
+
+                    &:focus {
+                        background-color: teal;
+                        color: white;
+                        text-decoration: underline;                
                     }
                 }
 
@@ -99,19 +108,12 @@ NAVIGATION STYLES
                 }
             }
 
-            /* highlight sub-menu current page */
-            li.current-menu-item,
-            li.current_page_item,
-            li.current_page_ancestor {
-                a {}
-            }
         }
 
         /* showing sub-menus */
-        &:hover>ul {
+        &:hover>ul, &:focus>ul, &:focus-visible>ul {
             display: block;
         }
-
     }
     /* end .menu ul li */
 
@@ -119,7 +121,8 @@ NAVIGATION STYLES
     li.current-menu-item,
     li.current_page_item,
     li.current_page_ancestor {
-        a {
+        &>a {
+            color: var(--jas_blue);
             &::after {
                 width: 100%;
             }
@@ -206,6 +209,11 @@ NAVIGATION STYLES
         }
 
         &>li {
+            &.current_page_item{
+                a{
+                    color: var(--jas_yellow_contrast);
+                }
+            }
             &>a {
                 
                 padding: 0 0 20px;

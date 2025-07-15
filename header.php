@@ -20,66 +20,11 @@
   </head>
 
   <body <?php body_class(); ?> >
+  <a class="skip-to-content-link" href="#main">
+  Skip to content
+</a>
 
-<!-- NAV TOGGLE -->    
-  	<a class="nav_toggle" href="#"> 
-			<span class="type">MENU</span><span class="bars"></span>
-		</a>
- 
-<!--OVERLAY NAV start -->    
-		<div class="nav_container_mobile">
-			<div class="nav_content container">
 
-					<nav role="navigation" >
-
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'menu' => __( 'Overlay Menu'),  // nav name
-    					         'menu_class' => 'nav mobile-nav',               // adding custom nav class
-    					         'theme_location' => 'overlay-menu',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); 
-
-          ?>
-          </nav>
-          <nav>
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'menu' => __( 'Secondary Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav secondary-overlay-nav',               // adding custom nav class
-    					         'theme_location' => 'secondary-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
-
-						</nav>
-
-            <div class="image-links">
-
-              <a href="https://samos.webuntis.com/WebUntis/?school=jas-ostbevern#/basic/login" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_untis.jpg" alt="Link zu WebUntis" /></a>
-              <a href="#" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_mensa.jpg" alt="Link zum Mensaplan" /></a>
-              <a href="https://jas-edu.de/iserv" target="blank"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_iserv.jpg" alt="Link zu iServ" /></a>
-
-            </div>
-
-      <form role="search" method="get" id="searchform_mobile" class="searchform" action="<?php echo home_url( '/' ); ?>">
-            
-        <input class="form-control me-2" type="search" name="s" placeholder="Suchbegriff" aria-label="Search" value="">
-        <button class="btn btn-outline-success" type="submit">Suchen</button>
-       
-      </form>
-        </div>
-		</div>
-    <!-- OVERLAY NAV end -->  
 
 <!-- HEADER start -->  
 			<header class="header" id="header">

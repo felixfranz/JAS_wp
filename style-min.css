@@ -247,6 +247,10 @@ body {
     border-radius: 5px;
     margin: 0 10px;
   }
+
+  .img_links img:hover { 
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.4);
+  }
   
   /** Section aktuelles **/
   
@@ -306,7 +310,17 @@ body {
     background-position: center right 3%;
   }
 
-  .akt_eintrag_title p
+  .akt_eintrag_title:hover {
+    background: url('img/arrow_red.svg') no-repeat;
+    background-size: 10px;
+    background-position: center right 3%;
+    /*background-color: var(--jas_lightgray);*/
+  }
+
+  .akt_eintrag_title:hover img {
+    border: 1px solid red;
+  }
+
   
   .akt_arrow {
     float: right;
@@ -368,7 +382,8 @@ body {
   }
   
   .footer_logos img {
-    padding-bottom: 15px;
+    margin-bottom: 17px;
+    border-radius: 5px;
   }
   
   .footer_finalrow {
@@ -383,6 +398,15 @@ body {
   }
   
   /*** SINGLE POST ***/
+
+  .single_post_pic_margin_bot {
+    margin-bottom: 50px;
+  }
+
+  .single_post_content {
+    margin-bottom: 50px;
+  }
+
   
   #single_post_content {
     background-color: white;
@@ -392,7 +416,7 @@ body {
   }
   
   .single_post_header_text {
-    margin-top: 60px;
+    /*margin-top: 60px;*/
     padding: 50px 75px 20px 75px;
     background-color: white;
     border: 1px solid var(--jas_lightgray);
@@ -410,7 +434,7 @@ body {
   .single_post_bottom-rounded {
     border-radius: 0 0 0px 30px;
     /*background-color: var(--jas_yellow);*/
-    background: linear-gradient(#fff 48px, var(--jas_yellow) 48px);
+    background: linear-gradient(#fff 48px, var(--jas_blue) 48px);
     height: 96px;
     padding: 0px;
   }
@@ -515,6 +539,84 @@ body {
   .team_col {
     margin-bottom: 20px;
   }
+
+  /** Kollegium **/
+
+.details-style1 summary {
+    background-color: var(--jas_lightgray);
+    padding: 1.4rem;
+    list-style-type: none;
+    position: relative;
+    height: 55px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.details-style1:hover summary::before {
+  color: var(--jas_yellow_contrast);
+  transition: all 0.5s var(--ease);
+}
+
+.details-style1 summary::before {
+    text-align: right;
+    content: "einblenden +";
+    position: absolute;
+    /*font-size: 3rem;*/
+    right: 0rem;
+    margin-top: -14px;
+    display: block;
+    background-color: var(--jas_blue);
+    color: white;
+    padding: 15px;
+    width: 150px;
+    height: 55px;
+}
+
+.details-style1[open] summary::before {
+    content: "ausblenden -";
+    /*transform: rotate(45deg);*/
+}
+
+  .koll_img {
+    margin-bottom: 15px;
+  }
+
+  .koll_col {
+    margin: 0px;
+  }
+
+ .koll_name {
+    background-color: white;
+    padding-bottom: 0px;
+    font-weight: 600;
+  }
+
+  .koll_card {
+    border: 1px /*solid var(--jas_mediumgray)*/;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-color: white;
+  }
+
+   .koll_card-title {
+    display:block;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    background-color: white;
+    /*border-style: dotted;
+    border-color: var(--jas_mediumgray);
+    border-image-source: url('img/dots.svg');
+    border-image-slice: 25% 25%; 
+    border-image-repeat: round;
+    border-width: 0 0 2px 0;*/
+  }
+
+  /** Search Results Page **/
+
+  .bottom-rounded-blue {
+    background-color: var(--jas_blue);
+  }
+
 
 
  
