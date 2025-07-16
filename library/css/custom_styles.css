@@ -556,6 +556,24 @@ NAVIGATION STYLES
   top: 1px;
 }
 
+#termine .ics-calendar .icon-list,
+#termine .ics-calendar .icon-month {
+  margin: -4px 5px auto;
+}
+#termine .ics-calendar-month-table-list-toggle label {
+  padding: 7px 5px 3px;
+}
+#termine .ics-calendar-month-table-list-toggle label:hover {
+  background-color: var(--jas_yellow_contrast);
+  color: black;
+}
+#termine .ics-calendar-month-table-list-toggle label:hover span {
+  color: black;
+}
+#termine .ics-calendar-month-table-list-toggle label:not(.current):hover > * {
+  opacity: 0.8;
+}
+
 .skip-to-content-link {
   background: #e77e23;
   left: 50%;
