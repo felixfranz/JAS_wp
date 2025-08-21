@@ -117,6 +117,10 @@ NAVIGATION STYLES
   display: inline-flex;
 }
 
+.nav_container_mobile ul li.current-page-ancestor > a, .nav_container_mobile ul li.current-menu-item > a, .nav_container_mobile .mobile-nav li ul.sub-menu li.current-menu-item > a {
+  color: var(--jas_yellow_contrast);
+}
+
 #searchform {
   display: inline-flex;
 }

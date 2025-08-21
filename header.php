@@ -20,7 +20,7 @@
   </head>
 
   <body <?php body_class(); ?> >
-  <a class="skip-to-content-link" href="#main">
+  <a class="skip-to-content-link" href="#main" aria-label="skip-to-content">
   Skip to content
 </a>
 
@@ -31,7 +31,7 @@
 
 				<div id="inner-header" class="container">
 					
-					<div id="logo" ><a href="<?php echo home_url(); ?>"></a></div>
+					<div id="logo"><a href="<?php echo home_url(); ?>" aria-labelledby="logo" role="logo" alt="Logo as link to start page">JAS Logo</a></div>
 					
 					<div class="nav_container_desktop">
 
@@ -72,4 +72,4 @@
 <!-- NAV end -->  
 
 <!-- MAIN CONTENT start -->
-<main>
+<main id="main">

@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row gx-5 d-flex justify-content-center footer_3col">
       <div class="col-lg-4">
-        <img class="footer_jas-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-jas.svg"/>
+        <img class="footer_jas-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo-jas.svg" alt="Logo Josef-Annegarn-Schule" />
 
         <?php echo get_field('footer_links', 'option'); ?>
 
@@ -95,7 +95,7 @@
 			
 			</form>
 
-			<a href="<?php echo get_field('instagram_link', 'option'); ?>" target="_blank">Instagram<span class="social_icon"><i class="fab fa-instagram" aria-hidden="true"></i></span></a>
+			<a href="<?php echo get_field('instagram_link', 'option'); ?>" class="social_icon" target="_blank">Instagram<span><i class="fab fa-instagram" aria-hidden="true"></i></span></a>
 
 	  </div>	 <!-- OVERLAY 	FOOTER end -->  
 

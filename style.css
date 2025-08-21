@@ -193,8 +193,18 @@ body {
     font-style: normal;
     font-weight: 300;
     color: var(--jas_dark);
-    font-size: /*4.4rem*/ 4rem;
+    font-size: 3rem;
   }
+
+   @media (min-width: 992px) {
+      h1 {
+          font-family: 'Roboto Slab';
+          font-style: normal;
+          font-weight: 300;
+          color: var(--jas_dark);
+          font-size: /*4.4rem*/ 4rem;
+        }
+   }
   
   h2, h3 {
     font-family: 'Roboto Slab';
@@ -225,9 +235,13 @@ body {
   }
   
   .header_text {
-    padding: /*75px 100px*/ 50px 50px;
+    padding: 30px 30px;
     background-color: white;
     border: 1px solid var(--jas_lightgray);
+  }
+
+  @media (min-width: 1200px) { 
+       .header_text { padding: 50px 50px;}
   }
   
   
@@ -243,10 +257,23 @@ body {
     height: 50px;
   }
   
+
   .bottom-rounded img {
     border-radius: 5px;
+    margin: 0 5px;
+  }
+
+ @media (min-width: 430px) {
+  .bottom-rounded img {
     margin: 0 10px;
   }
+
+   .bottom-rounded {
+
+    padding: 20px 0px;
+  }
+
+ }
 
   .img_links img:hover {
     -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.4); 
@@ -277,21 +304,21 @@ body {
     visibility: hidden;
   }
   
-  .cool-dots-box {
+ .cool-dots-box {
     height: 4px;
     margin-top: -4px;
     width: 96%;
   }
   
   .cool-dots {
-    border-style: dotted;
-    border-color: var(--jas_dark);
+    border-bottom: 1px solid;
+    border-color: var(--jas_mediumgray);
     /* border-image-source: url("https://cl.ly/3c2J3c0l3r0P/dots.svg"); ORIGIAL-BILD  */
-    border-image-source: url('img/dots.svg');
+    /* border-image-source: url('img/dots.svg');*/
     /* border-image-slice: 33% 33%; */
-    border-image-slice: 25% 25%; 
-    border-image-repeat: round;
-    border-width: 0 0 2px 0;
+    /*border-image-slice: 25% 25%; */
+    /*border-image-repeat: round;*/
+    /*border-width: 0 0 2px 0;*/
   }
   
   .akt_eintrag_date {
@@ -322,6 +349,7 @@ body {
     border: 1px solid red;
   }
 
+  .akt_eintrag_title p {}
   
   .akt_arrow {
     float: right;
@@ -330,6 +358,10 @@ body {
   
   .post_header_bar {
     background-color: var(--jas_yellow);
+  }
+
+  .archiv_link {
+    margin-top: 35px;
   }
   
   /** Section termine **/
@@ -342,32 +374,31 @@ body {
   
   
   
-  /** Section schulleben **/
+  /** Sections stuff **/
 
   .section_standards {
     padding-top: /*100px*/ 75px;
     padding-bottom: /*100px*/ 75px;
     font-size: 1.8rem;
   }
+
   
-  #schulleben {
-    background: linear-gradient(var(--jas_lightyellow) 500px, #fff 1px);
+  /** 2col **/
+  .mg_bottom {
+    margin-bottom: 50px;
   }
-  
-  /** Section schulsozialarbeit **/
-  
-  #schulsozialarbeit {
-    background-color: white;
+
+  @media (min-width: 992px) { 
+    .mg_bottom {
+     margin-bottom: 0px;
+   }
   }
-  
-  /** Section berufsorientierung **/
-  
-  #berufsorientierung {
-    background: linear-gradient(var(--jas_lightblue) 500px, #fff 1px);
-  }
+
+
   /** Footer **/
   
   #footer {
+    border-top: 1px solid var(--jas_mediumgray);
     background-color: var(--jas_lightgray);
     font-size: 1.8rem;
   }
@@ -382,9 +413,63 @@ body {
     padding-bottom: 80px;
   }
   
+.logo-block {
+  padding-top: 0px;
+}
+
+.footer_logos {
+  margin-top: 50px;
+}
+
+@media (min-width: 992px) {
+  .footer_logos {
+  margin-top: 0px;
+}
+}
+
+@media (max-width: 767px) { 
+.logo-block {
+  padding-top: 40px;
+}
+
+ .footer_3col {
+  padding-top: 50px;
+  padding-bottom: 40px;
+ }
+
+ .footer_logos img {
+margin-left: 5px;
+margin-right: 5px;
+border: 5px solid white;
+ 
+
+ }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+.logo-block {
+  padding-top: 50px;
+}
+
+ .footer_3col {
+  padding-top: 60px;
+  padding-bottom: 40px;
+ }
+
+ .footer_logos img {
+margin-left: 15px;
+margin-right: 15px;
+ }
+
+}
+
+
   .footer_logos img {
     margin-bottom: 17px;
     border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1); 
+    box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1);
   }
   
   .footer_finalrow {
@@ -400,12 +485,18 @@ body {
   
   /*** SINGLE POST ***/
 
+  .section_single_post_first {
+    padding-top: /*100px*/ 75px;
+    padding-bottom: /*100px*/ 15px;
+    font-size: 1.8rem;
+  }
+
   .single_post_pic_margin_bot {
     margin-bottom: 50px;
   }
 
   .single_post_content {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   
@@ -418,10 +509,15 @@ body {
   
   .single_post_header_text {
     /*margin-top: 60px;*/
-    padding: 50px 75px 20px 75px;
+    padding: 30px 30px 10px 30px;
     background-color: white;
     border: 1px solid var(--jas_lightgray);
     border-bottom: 0px;
+  }
+
+
+  @media (min-width: 1200px) { 
+    .single_post_header_text { padding: 50px 50px 10px 50px;}
   }
   
   .single_subhead {
@@ -466,10 +562,17 @@ body {
   }
   
   .quote_bar {
-    padding-left: 60px;
-    width: 80%;
-  
+    padding-left: 40px;
+    width: 90%;
   }
+
+   @media (min-width: 992px) { 
+      .quote_bar {
+        padding-left: 60px;
+        width: 80%;
+      }
+
+    }
 
   .quote_typo {
     font-size: 2.2rem;
@@ -619,6 +722,19 @@ body {
     background-color: var(--jas_blue);
   }
 
+/** misc **/
 
-
+.pic-mg-bottom {
+  margin-bottom: 40px;
+}
  
+.pic-mg-top {
+  margin-top: 40px;
+}
+
+/** Downloads **/
+
+.dl_headline {
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
