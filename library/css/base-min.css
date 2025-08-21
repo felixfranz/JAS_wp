@@ -1,4 +1,20 @@
 @charset "UTF-8";
+h3 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  color: var(--jas_dark);
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+
+a {
+  color: #0e3ab5;
+}
+a:hover {
+  color: #082882;
+}
+
 /*********************
 HEADER STYLES
 *********************/
@@ -15,6 +31,7 @@ HEADER STYLES
 #header #inner-header #logo {
   float: left;
   width: 100px;
+  line-height: 0;
 }
 #header #inner-header #logo a {
   display: inline-block;
@@ -23,6 +40,8 @@ HEADER STYLES
   height: 75px;
   transition: none;
   -webkit-transition: none;
+  font-size: 0;
+  color: transparent;
 }
 
 /*********************
@@ -99,7 +118,10 @@ NAVIGATION STYLES
   transform: translateX(0);
   transition-delay: 0.3s;
 }
-.nav_container_mobile nav ul li .current-menu-item > a {
+.nav_container_mobile nav ul li.current-menu-item > a {
+  color: var(--jas_yellow_contrast);
+}
+.nav_container_mobile nav ul li.current-page-ancestor > a {
   color: var(--jas_yellow_contrast);
 }
 .nav_container_mobile .mobile-nav {
@@ -308,6 +330,7 @@ NAVIGATION STYLES
 .overlay_footer .social_link {
   color: white;
   text-decoration: none;
+  font-size: 20px;
 }
 .overlay_footer .social_link span {
   margin-left: 10px;
@@ -467,17 +490,34 @@ NAVIGATION STYLES
     width: 100%;
   }
   #aktuelles .akt_eintrag {
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--jas_mediumgray);
     border-top: 1px solid var(--jas_mediumgray);
+  }
+  #aktuelles .akt_eintrag:last-of-type {
+    border-bottom: 1px solid var(--jas_mediumgray);
   }
   #aktuelles .akt_eintrag_date {
     text-align: left;
-    padding: 7px 20px;
+    padding: 7px 20px 0;
     font-size: 15px;
+    background: white;
+  }
+  #aktuelles .akt_eintrag_title {
+    background-position: top right 3%;
+  }
+  #aktuelles .akt_eintrag_title a {
+    padding: 3px 20px 20px;
   }
   #aktuelles .cool-dots {
     display: none;
+  }
+}
+@media only screen and (max-width: 575px) {
+  #aktuelles .akt_eintrag {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 .page-template-aktuelles #aktuelles {
@@ -550,7 +590,79 @@ NAVIGATION STYLES
 .footer_finalrow p a:hover {
   color: var(--jas_yellow_contrast);
 }
-.footer_finalrow .social_icon {
+.footer_finalrow .social_link {
   position: relative;
   top: 1px;
+  color: white;
+}
+.footer_finalrow .social_link span {
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+}
+.footer_finalrow .social_link:hover {
+  color: var(--jas_yellow_contrast);
+}
+
+#termine .ics-calendar .icon-list,
+#termine .ics-calendar .icon-month {
+  margin: -4px 5px auto;
+}
+#termine .ics-calendar-month-table-list-toggle label {
+  padding: 7px 5px 3px;
+}
+#termine .ics-calendar-month-table-list-toggle label:hover {
+  background-color: #fffae5;
+  color: black;
+}
+#termine .ics-calendar-month-table-list-toggle label:not(.current):hover > * {
+  opacity: 0.8;
+}
+#termine .ics-calendar-select {
+  font-size: 100%;
+  padding: 7px 5px 5px;
+}
+
+.skip-to-content-link {
+  background: black;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  display: flex;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  color: white;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-weight: bold;
+}
+.skip-to-content-link:hover {
+  color: var(--jas_yellow_contrast);
+}
+
+.skip-to-content-link:focus,
+.skip-to-content-link:focus-within {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.logo a:focus {
+  background: #e77e23;
+}
+
+.menu-item-has-children a:focus::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  left: 50%;
+  bottom: -8px;
+  border-style: solid;
+  border-width: 8px 6px 0 6px;
+  border-color: black transparent transparent transparent;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }

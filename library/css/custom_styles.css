@@ -115,10 +115,10 @@ NAVIGATION STYLES
   transform: translateX(0);
   transition-delay: 0.3s;
 }
-.nav_container_mobile nav ul li .current-menu-item > a {
+.nav_container_mobile nav ul li.current-menu-item > a {
   color: var(--jas_yellow_contrast);
 }
-.nav_container_mobile nav ul li .current-page-ancestor > a {
+.nav_container_mobile nav ul li.current-page-ancestor > a {
   color: var(--jas_yellow_contrast);
 }
 .nav_container_mobile .mobile-nav {

@@ -46,9 +46,14 @@ NAVIGATION STYLES
   color: var(--jas_dark);
   transition: all 0.1s cubic-bezier(0.12, 0.845, 0.305, 1);
 }
-.nav li > a:hover, .nav li > a:focus {
+.nav li > a:hover {
   color: var(--jas_blue);
   text-decoration: none;
+}
+.nav li > a:focus {
+  background-color: teal;
+  color: white;
+  text-decoration: underline;
 }
 .nav li ul.sub-menu,
 .nav li ul.children {
@@ -78,17 +83,22 @@ NAVIGATION STYLES
 .nav li ul.children li a::after {
   display: none;
 }
-.nav li ul.sub-menu li a:hover, .nav li ul.sub-menu li a:focus,
-.nav li ul.children li a:hover,
-.nav li ul.children li a:focus {
+.nav li ul.sub-menu li a:hover,
+.nav li ul.children li a:hover {
   background: var(--jas_blue);
   color: white;
+}
+.nav li ul.sub-menu li a:focus,
+.nav li ul.children li a:focus {
+  background-color: teal;
+  color: white;
+  text-decoration: underline;
 }
 .nav li ul.sub-menu li:last-child a,
 .nav li ul.children li:last-child a {
   border-bottom: 0;
 }
-.nav li:hover > ul {
+.nav li:hover > ul, .nav li:focus > ul, .nav li:focus-visible > ul {
   display: block;
 }
 .nav li.current-menu-item > a,
@@ -105,6 +115,10 @@ NAVIGATION STYLES
 /* end .nav */
 .primary-nav {
   display: inline-flex;
+}
+
+.nav_container_mobile ul li.current-page-ancestor > a, .nav_container_mobile ul li.current-menu-item > a, .nav_container_mobile .mobile-nav li ul.sub-menu li.current-menu-item > a {
+  color: var(--jas_yellow_contrast);
 }
 
 #searchform {
